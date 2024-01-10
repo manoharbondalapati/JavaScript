@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // Difference Between slice() & substring() methods
+        // slice()  method extracts a part of a string
+        //  the method returns the extracted part in a new string.
+        var str = "Hello world!";
+       console.log(str.length);
+       var result = str.slice(0,10);
+       console.log(result);
+       var result1 = str.slice(3);
+       console.log(result1);
+        var result2 = str.slice(1,1);
+        console.log(result2);// empty string as o/p in substring aslo
+    //substring
+        var result3 = str.substring(1,1);
+        console.log(result3);// same as slice
+          var result4 = str.slice(13,1);
+          console.log(result4);// in this case aslo give empty string
+  // in sbustring it swaps the  values and gives o/p
+         var result5 = str.substring(13,1);
+         console.log(result5); 
+  //in substring it cannot allow negative values
+         var result6 = str.substring(-2,-5);
+          console.log(result6);
+  // in slice method it allows negative values
+         var result7 = str.slice(-5, -2);
+         console.log(result7);
+
+
+// task 2 how many charachters,words,lines in a string
+     var str = `my name is manohar, Iam from Tadepalli
+                 my hobbies playing outdoor games
+                 and carrom board`;
+     var characters =str.split("").length;// characters
+     console.log( " no of characters in a above string",characters);
+     var words = str.split(" ").length;//words
+      console.log("no of words in a above string",words);
+      var lines =str.split("\n").length;
+      console.log("no of lines in above paragraph",lines);
+
+// task3 convert string to array and array to string
+    var str = "Iam manohar from Tadepalli";
+    var toarray = str.split(" ");
+    console.log(toarray);//array converted
+    var array = ["manohar", "manu", "ma"];
+    //  var tostring = array.join('-');
+    //  console.log(tostring);
+    var tostr = array.toString();
+    console.log(tostr)
+    console.log("with ifens",tostr.join("-"));
+    // var tostr = array.toString();
+    // console.log("with ifens=",array.join("-"));
+    
+    
+   
+    // var tostring =str.split("");
+    // console.log("adding - between characters-->",tostring.join("-"));// string converted with ifens
+
+// phone number in array and add +1 to each digit
+     var ph = [9,3,9,1,2,8,3,5,8,9];
+     console.log(ph);
+    
+      for (i =0; i<ph.length; i++)
+      {
+        var add = (Number(ph[i]))+1
+       
+        console.log(add);
+    
+      }
+
+
+
+// doubt sec tasks
+// ḍiamond shap pattern
+    for(var i =0;i<=5; i++)
+    {
+        var line = " ";
+        for(var j=5;j>i;j--)
+        {
+            line=line+" ";
+        }
+        for(k=0 ; k<=i;k++)
+        {
+            line = line + "*";
+        }
+        for(l=1;l<=i;l++)
+        {
+            line = line +"*";
+        }
+        console.log(line);
+    }
+    for(var i =5;i>=0; i--)
+    {
+        var line = " ";
+        for(var j=5;j>i;j--)
+        {
+            line=line+" ";
+        }
+        for(k=0 ; k<=i;k++)
+        {
+            line = line + "*";
+        }
+        for(l=1;l<=i;l++)
+        {
+            line = line +"*";
+        }
+        console.log(line);
+    }
+
+
+
+    // uppercase
+   var str ="manohar_manu_ma";
+//    debugger
+   var result ="";
+   {
+       for( i=0;i<str.length ; i++)
+       {
+        if(str[i]==="_")
+        {
+            while(str[i+1] !="_" && i + 1 < str.length)
+            {
+                result += str[i + 1].toUpperCase();
+                i++; 
+            }
+        
+        }
+        else
+        {
+            result +=str[i];
+        }
+       }
+       console.log(result);
+   }
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    // max of three number using ternary operator
+    var num1 = 5;
+    var num2 = 8;
+    var num3 = 33;
+    //debugger
+    
+     var maxnumber = (num1 > num2) ? 
+     ((num1 > num3) ? num1 : num3) :
+      ((num2 > num3) ? num2 : num3);
+
+      console.log("maximum number is",maxnumber);
+
+
+
+    </script>
+</body>
+</html>
