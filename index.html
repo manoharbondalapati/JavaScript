@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+    console.log("increase pattern");
+  for ( let i=1; i<=5; i++)
+    {
+         var line = "";
+        for (let j=1; j<=i; j++)
+            {
+              line = line +j;
+             }
+             console.log(line); 
+   }
+
+    console.log("Decrease pattern");
+     for ( var i=5; i>=1; i--)
+     {
+        var line = "";
+        for( var j=1; j<=i ; j++)
+        {
+           line= line +j;
+        }
+         console.log(line);
+     }
+   
+        
+        
+    console.log("prime numbers");
+        for(i=2; i<=100; i++)
+        {
+            for(j=2; j<=i ;j++)
+            {
+                if(i%j==0)
+                {
+                 break;
+                }
+            
+            }
+            if(i==j){
+              console.log(j); ;
+            }
+            
+        }
+
+         console.log("fabinocci series")
+        
+         var  n1=0,n2=1,swap;
+          console.log(n1);
+          console.log(n2);
+         for (i= 1; i<10; i++)
+         {
+           swap = n1+n2;
+            n1=n2;
+            n2=swap;
+            console.log(swap);
+           
+         }
+         
+
+          var employee={
+                        id:456,
+                        name:"manohar",
+                        designation: "Engineer",
+                        salary:"12k",
+                        
+         };
+         console.log(employee);
+         employee.role = employee.designation;
+         delete employee.designation;
+         console.log(employee);
+
+        
+               
+
+
+
+
+
+
+ // console.log("dayOfWeek problem");
+//           function dayOfWeeks(day)
+//           {
+//             if(day == 1)
+//             {
+//                 return 'Monday';
+//             }
+//             else if( day == 2)
+//             {
+//                 return 'Tuesday';
+//             }
+//             else if(day == 3 )
+//             {
+//                 return 'Wednesday';
+//             }
+//             else if( day == 4)
+//             {
+//                 return 'Thursday'
+//             }
+//             else if( day == 5)
+//             {
+//                  return 'Friday';
+//             }
+//             else if ( day== 6)
+//             {
+//                 return 'Saturday';
+//             }
+//             else if (day == 7){
+//                  return  'Sunday';
+//             }
+//             else 
+//             {
+                
+//                 console.log("Invalid Day")
+            
+//             }
+             
+//         }
+//           console.log(dayOfWeeks(3));
+//           console.log(dayOfWeeks(8));
+         
+       
+        // console.log("even or odd problem");
+    //  function isEven(num)
+    //  {
+    //     if(num % 2 == 0)
+    //     {
+    //         return 'Even';
+    //     }
+    //     else {
+    //         return 'Odd';
+    //     }
+    //  }
+    //  console.log(isEven(4));
+    //  console.log(isEven(7)); 
+   </script>
+</body>
+</html>
