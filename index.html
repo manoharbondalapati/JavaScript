@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Object Methods</h1>
+     
+    <h3>1.Object.keys()</h3>
+    <p>
+        <pre>
+          Object.keys method is used to display only object keys
+               for Example     var employee = {id : 12 , name : "manu"};
+                                   console.log(Object.keys(employee));</pre>
+    </p>
+    <h3>2.Object.values()</h3>
+    <p>
+        <pre>
+          Object.keys method is used to display only object values
+               for Example     var employee = {id : 12 , name : "manu"};
+                                   console.log(Object.values(employee));</pre>
+    </p>
+    <h3>3.Object.entries()</h3>
+    <p>
+        <pre>
+          Object.keys method is used to display both keys and values in array format
+               for Example     var employee = {id : 12 , name : "manu"};
+                                   console.log(Object.entries(employee));</pre>
+    </p>
+    <h3>4. .hasOwnProperty()</h3>
+    <p>
+        <pre>
+          this method is used to find wheather the key is present or not in the object
+               for Example     var employee = {id : 12 , name : "manu"};
+                                   console.log(employee.hasOwnProperty("id"));</pre>
+    </p>
+    <h3>5.Object.assign()</h3>
+    <p>
+        <pre>
+          this method is used to copy the values and properties from one or more objects
+               for Example     var employee = {id : 12 , name : "manu"};
+                               var student  = {role: "engineer"}
+                               var details = Object.assign({} , employee, student);
+                               console.log(details);</pre>
+    </p>
+    <h3>6.Object.freeze()</h3>
+    <p>
+        <pre>
+           when this method is wrote cannot change, update, add new properties and values into an object
+               for Example     var employee = {id : 12 , name : "manu"};
+                                   Object.freeze(employee);</pre>
+    </p>
+    <h3>6.Object.seal()</h3>
+    <p>
+        <pre>
+           when this method is wrote cannot change, add new properties and values into an object but 
+           update the properties values.
+               for Example     var employee = {id : 12 , name : "manu"};
+                                  console.log(employee);
+                                var student = Object.seal(employee);
+                                employee.name = 'manohar';
+                                    console.log(student);</pre>
+    </p>
+    
+    
+  <script>
+    // create one object name myobject
+      var myobject={
+            id:11,
+            name:"Manohar",
+            passedout:2022,
+        };
+        console.log(Object.keys(myobject));// only keys
+        console.log(Object.values(myobject)); // only values
+        console.log(Object.entries(myobject)); // keys and values in array
+        console.log(myobject.hasOwnProperty('id')); // id or not checking
+        for(var key in myobject)// keys or not checking
+        {
+            console.log(key)// print only key
+        }
+        for(var value of Object.values(myobject))
+        {
+            console.log(value)// print  only values 
+        }
+
+        // in object changing values
+        console.log("changing the values in object");
+         var oldobj={
+            id:11,
+            name:"manu",
+        };
+        var newobj=oldobj;
+        console.log("before chenging", oldobj,newobj);
+        newobj.name="ma";
+         console.log( "after changing", oldobj,newobj); // changing values also in oldobj
+        
+        // new property
+        console.log("new property adding")
+        var newobj1=Object.assign({color:'orange'},oldobj);
+        console.log(oldobj,newobj1); //doubt
+        newobj1.name="manohar34";
+        console.log(oldobj,newobj1); //doubt
+
+        // var newobj2={...oldobj}; // not affected in oldobj
+        // console.log(oldobj,newobj2);
+        // newobj2.name="Mano";
+        // console.log(oldobj,newobj2);
+
+       //object.freeze()
+
+        console.log("freeze cannot update and add")
+        var newobj3={
+            role:"Engineer",
+            company:"MNC"
+        };
+        var newobj4=Object.freeze(newobj3);
+        console.log("before",newobj3,newobj4);
+        newobj4.role="software"; // cannot  changing
+        newobj4.age=23; // cannot adding
+        delete newobj4.role; // cannot deleting
+        console.log("After",newobj3,newobj4);//operations not work
+
+        // object.seal()
+        var objseal={
+            color:'green',
+            number:3,
+        };
+        console.log("seal can update but cannot add")
+        var newobj5=Object.seal(objseal);
+        console.log("before",objseal,newobj5);
+        newobj5.color="blue"; // changing
+        newobj5.salary=23000;//cannot add
+        delete newobj5.color;//cannot delete
+        console.log("After",objseal,newobj5);
+
+        //  delete method
+        console.log("deleting property")
+        var obj={id:121, name : "manu" , role : "software"};
+           console.log(obj);
+           delete obj.id; // deletes
+           console.log(obj);
+   
+  //  increase star pattern
+        console.log("increase pattern")
+        for (i=1; i<=5 ; i++)
+        {
+            var str = "";
+            for(j=1; j<=i; j++)
+            {
+                str = str +"*";
+            }
+          console.log(str) 
+        }
+
+          // decrease star pattern
+          console.log("Decrease pattern")
+          for (i=5; i>=1 ; --i)
+        {
+            var str = "";
+            for(j=1; j<=i; j++)
+            {
+                str = str +"*";
+            }
+          console.log(str) 
+        }
+     
+        console.log("factorial");
+         var num = 4;
+         sum =1;
+         for(i=1 ; i<=num; i++)
+         {
+             sum = sum *i;
+         }
+         console.log( "factorial of ",num, "is",sum);
+
+       
+
+
+  //  naresh sir daimond shape "task
+      console.log("daimond shape");
+        for (i=1; i<=5 ; i++)
+        {
+            var str = "";
+            for(j=1; j<=i; j++)
+            {
+                str = str +"*";
+            }
+          console.log(str) 
+        }
+
+ 
+          for (i=5; i>=1 ; --i)
+        {
+            var str = "";
+            for(j=1; j<=i; j++)
+            {
+                str = str +"*";
+            }
+          console.log(str) 
+        }
+   
+  //   doubt sec task 1
+  for( i = 1 ; i<=100; i++)
+  {
+    if(i % 3 === 0 && i % 5 === 0)
+    {
+      console.log(i,"FizzBuzz");
+    }
+    else if(i% 3==0)
+    {
+      console.log(i, "Fizz")
+
+    }
+    else if( i % 5 == 0)
+    {
+      console.log(i,"Buzz");
+    }
+    else 
+    {
+      console.log(i);
+    }
+  }
+   
+      
+
+
+     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
