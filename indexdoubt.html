@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+     var employee={
+                        id:456,
+                        name:"manohar",
+                        designation: "Engineer",
+                        salary:"12k",
+                        
+         };
+         console.log(employee);
+         employee.role = employee.designation;
+         delete employee.designation;
+         console.log(employee);
+
+
+
+
+
+
+
+
+        var str = "manOHAR";
+        var str1 = "";
+        for( i = 0; i< str.length; i++)
+        {
+            var ch = str.charAt(i);
+            var ch1 = str[i];
+
+            if( ch === ch.toUpperCase(ch1))
+            {
+                str1 = str1 + ch.toLowerCase(ch1);
+
+            }
+            else if(ch === ch.toLowerCase(ch1))
+            {
+                str1 = str1+ch.toUpperCase(ch1);
+            }
+            
+        }
+
+        console.log(str1);
+
+
+        let stars = '';
+    for (let i = 1; i <= 5; i++) {
+        stars += '*';
+        console.log(stars);
+}
+// let stars1 = '';
+//     for (let i = 5; i >= 1; --i) {
+//         stars1 += '*';
+//         console.log(stars1);
+// }
+
+
+
+
+let sum = 0;
+let number =371;
+
+let temp = number;
+while (temp > 0) {
+    
+    let remainder = temp % 10;
+
+    sum += remainder * remainder * remainder;
+
+    
+    temp = parseInt(temp / 10); // convert float into integer
+}
+
+if (sum == number) {
+    console.log(`${number} is an Armstrong number`);
+}
+else {
+    console.log(`${number} is not an Armstrong number.`);
+}
+
+    </script>
+</body>
+</html>
